@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open \"/Users/Cheyoung/Documents/01. beauty_academy/ambassador_certificate.html\")",
+      "Bash(npm -v)",
+      "Bash(nvm --version)",
+      "Bash(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh)",
+      "Bash(bash)",
+      "WebFetch(domain:antigravity.google)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}
