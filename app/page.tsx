@@ -22,7 +22,7 @@ import Navbar from "@/components/ui/Navbar";
 import FloatingCTA from "@/components/ui/FloatingCTA";
 import SocialLinks from "@/components/ui/SocialLinks";
 import dynamic from "next/dynamic";
-import { BLUR_DATA_URL } from "@/lib/images";
+import { BLUR_DATA_URL, assetPath } from "@/lib/images";
 import {
   benefits,
   curriculum,
@@ -225,7 +225,7 @@ export default function Home() {
               <FadeIn>
                 <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl border-2 border-gold/60">
                   <Image
-                    src="/images/instructor.jpg"
+                    src={assetPath("/images/instructor.jpg")}
                     alt={`${instructor.name} (${instructor.nameEn})`}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"

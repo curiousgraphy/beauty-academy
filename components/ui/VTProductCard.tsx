@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { VTProduct } from "@/lib/data";
-import { BLUR_DATA_URL } from "@/lib/images";
+import { BLUR_DATA_URL, assetPath } from "@/lib/images";
 import Chip from "./Chip";
 
 interface VTProductCardProps {
@@ -12,7 +12,7 @@ export default function VTProductCard({ product }: VTProductCardProps) {
     <div className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-gold/40">
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-section">
         <Image
-          src={`/images/vt-${product.slug}.jpg`}
+          src={assetPath(`/images/vt-${product.slug}.jpg`)}
           alt={product.name}
           fill
           loading="lazy"
