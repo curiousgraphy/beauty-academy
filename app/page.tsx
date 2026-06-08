@@ -20,8 +20,8 @@ import VTProductCard from "@/components/ui/VTProductCard";
 import FadeIn from "@/components/ui/FadeIn";
 import Navbar from "@/components/ui/Navbar";
 import FloatingCTA from "@/components/ui/FloatingCTA";
-import Accordion from "@/components/ui/Accordion";
 import SocialLinks from "@/components/ui/SocialLinks";
+import dynamic from "next/dynamic";
 import { BLUR_DATA_URL } from "@/lib/images";
 import {
   benefits,
@@ -34,6 +34,14 @@ import {
   venue,
   vtProducts,
 } from "@/lib/data";
+
+// 하단(below-the-fold) 클라이언트 컴포넌트는 code-split.
+// ssr은 유지하여 SEO/초기 HTML에 콘텐츠가 포함되도록 한다.
+const Accordion = dynamic(() => import("@/components/ui/Accordion"), {
+  loading: () => (
+    <div className="h-64 animate-pulse rounded-xl border border-border bg-card" />
+  ),
+});
 
 // 혜택 아이콘 키 → lucide 컴포넌트 매핑
 const benefitIcons = {

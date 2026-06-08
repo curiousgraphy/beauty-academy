@@ -15,6 +15,7 @@ export default function VTProductCard({ product }: VTProductCardProps) {
           src={`/images/vt-${product.slug}.jpg`}
           alt={product.name}
           fill
+          loading="lazy"
           sizes="(max-width: 768px) 50vw, 20vw"
           placeholder="blur"
           blurDataURL={BLUR_DATA_URL}

@@ -287,3 +287,107 @@ export const faq: FAQItem[] = [
       "행사 14일 전까지 전액 환불, 7일 전까지 50% 환불이 가능합니다. 이후에는 환불이 어려우나 1회에 한해 양도가 가능합니다.",
   },
 ];
+
+// ===================== 상세 커리큘럼 (curriculum 페이지) =====================
+
+export interface DetailedSession {
+  /** 진행 시간대 */
+  time: string;
+  /** 세션 뱃지 (예: SESSION 1) — 없을 수도 있음 */
+  badge?: string;
+  title: string;
+  /** 2–3줄 상세 설명 */
+  description: string;
+  /** 학습 포인트 */
+  points: string[];
+}
+
+/** 오전 1부 — 라이브 시연 (보라 accent) */
+export const morningDetail = {
+  label: "1부 · 10:00–13:00 · Premium Live Demonstration",
+  sessions: [
+    {
+      time: "10:00 – 10:30",
+      badge: "SESSION 1",
+      title: "Opening & K-Beauty Presentation",
+      description:
+        "K-Beauty의 철학과 최신 트렌드를 소개하며 클래스를 엽니다. K-Pop 아이돌과 배우들의 실제 메이크업을 레퍼런스로 분석하고, 오늘의 모델 피부를 진단해 메이크업 방향을 함께 설정합니다.",
+      points: [
+        "K-Beauty 트렌드 흐름과 핵심 철학",
+        "K-Pop · 배우 메이크업 레퍼런스 분석",
+        "모델 피부 타입 진단 및 컨디션 체크",
+        "오늘의 메이크업 방향 설정",
+      ],
+    },
+    {
+      time: "10:30 – 11:40",
+      badge: "SESSION 2",
+      title: "Glass Skin & K-Wedding Makeup Demonstration",
+      description:
+        "스킨케어 루틴부터 글래스 스킨 베이스, 속눈썹 연출, K-웨딩 메이크업 완성까지 전 과정을 라이브로 시연합니다. 단계별로 제품 선택과 손의 움직임, 광 표현의 원리를 상세히 설명합니다.",
+      points: [
+        "스킨케어 루틴 & 피부 준비 단계",
+        "글래스 스킨 베이스 레이어링",
+        "속눈썹 · 아이 메이크업 연출",
+        "K-웨딩 메이크업 완성 시연",
+      ],
+    },
+    {
+      time: "11:40 – 13:00",
+      badge: "Q&A",
+      title: "Photo Shooting · Q&A · Networking",
+      description:
+        "완성된 모델의 클로즈업 포토타임과 함께 실시간 질의응답을 진행합니다. 참가자 간 네트워킹으로 1부를 마무리합니다.",
+      points: [
+        "모델 클로즈업 포토타임",
+        "실시간 Q&A",
+        "참가자 네트워킹",
+        "점심 (12:00 – 14:00)",
+      ],
+    },
+  ] satisfies DetailedSession[],
+};
+
+/** 오후 2부 — 핸즈온 실습 (그린 accent) */
+export const afternoonDetail = {
+  label: "2부 · 14:00–16:00 · Hands-on Intensive Class",
+  practicalTraining: {
+    title: "Practical Training",
+    items: [
+      "K-Beauty식 글래스 스킨 표현",
+      "피부 결 표현 방법",
+      "윤광 레이어링 실습",
+      "얇고 투명한 베이스 표현",
+      "피부 표현 디테일 교정",
+      "VT 제품 응용 방법",
+    ],
+  },
+  coaching: {
+    title: "1:1 Touch-up Coaching",
+    items: [
+      "피부 표현 교정",
+      "브러시 사용법 디테일",
+      "광 표현 밸런스 조절",
+      "메이크업 밀착감 체크",
+      "개별 터치업 피드백",
+    ],
+  },
+};
+
+/** 준비물 & 유의사항 */
+export const preparation = {
+  bring: {
+    title: "개인 지참",
+    items: ["메이크업 브러시 세트", "스펀지 · 퍼프", "기본 베이스 제품"],
+  },
+  provided: {
+    title: "현장 제공",
+    items: [
+      "VT 코스메틱 제품 (Full Package 한정)",
+      "실습용 모델 및 기본 자재",
+      "위생 키트",
+    ],
+  },
+  dressCode:
+    "편안한 복장을 권장합니다. 실습 중 소매가 쉽게 걷히는 상의를 추천하며, 본인 메이크업은 가볍게 하고 오시면 실습에 도움이 됩니다.",
+};

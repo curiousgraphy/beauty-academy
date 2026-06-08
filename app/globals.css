@@ -14,4 +14,15 @@
   ::selection {
     @apply bg-gold/30 text-offwhite;
   }
+
+  /* 키보드 포커스 스타일 — 골드 outline (마우스 클릭 시에는 미노출) */
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-background;
+    border-radius: 9999px;
+  }
+
+  /* 다크 고정 — prefers-color-scheme 무시 */
+  :root {
+    color-scheme: dark;
+  }
 }
