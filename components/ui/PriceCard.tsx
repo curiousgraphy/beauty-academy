@@ -1,4 +1,5 @@
 import type { TicketPlan } from "@/lib/data";
+import { eventMeta } from "@/lib/data";
 import Chip from "./Chip";
 
 interface PriceCardProps {
@@ -17,7 +18,7 @@ export default function PriceCard({ plan }: PriceCardProps) {
       {plan.featured && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2">
           <Chip variant="gold" className="bg-gold text-background">
-            Best Value
+            추천
           </Chip>
         </div>
       )}
@@ -43,7 +44,7 @@ export default function PriceCard({ plan }: PriceCardProps) {
 
       {plan.limited && (
         <div className="mt-4">
-          <Chip variant="green">{plan.limited}</Chip>
+          <Chip variant="warning">⚠ {plan.limited}</Chip>
         </div>
       )}
 
@@ -62,7 +63,7 @@ export default function PriceCard({ plan }: PriceCardProps) {
       </ul>
 
       <a
-        href="#register"
+        href={eventMeta.registerUrl}
         className={`mt-8 inline-flex items-center justify-center rounded-full px-6 py-3 font-body text-sm font-semibold uppercase tracking-wider transition-colors ${
           plan.featured
             ? "bg-gold text-background hover:bg-gold/90"
