@@ -1,0 +1,128 @@
+/* ============ Fonts ============ */
+@font-face { font-family: "Pretendard"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 800; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-ExtraBold.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 900; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-Black.woff2") format("woff2"); }
+
+/* ============ Design tokens ============ */
+:root {
+  --cbb-white: #FFFFFF;
+  --cbb-mint-tint: #EAFBF5;
+  --cbb-pink-tint: #FDEFF1;
+  --cbb-line: #ECECEC;
+  --cbb-grey: #8A8A8A;
+  --cbb-ink-2: #555555;
+  --cbb-ink: #1A1A1A;
+  --cbb-mint: #BBFCEC;
+  --cbb-pink: #F5DADF;
+  --cbb-rose: #DC6E88;
+  --cbb-rose-ink: #B84E68;
+  --cbb-mint-deep: #1E8F76;
+  --cbb-shadow-sm: 0 1px 2px rgba(26,26,26,.06), 0 2px 8px rgba(26,26,26,.05);
+  --cbb-shadow-md: 0 4px 14px rgba(26,26,26,.08), 0 10px 30px rgba(26,26,26,.06);
+  --cbb-shadow-rose: 0 8px 24px rgba(220,110,136,.28);
+  --cbb-shadow-mint: 0 8px 24px rgba(120,230,200,.45);
+  --cbb-font: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", system-ui, sans-serif;
+}
+
+/* ============ Reset ============ */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #fff; }
+body {
+  font-family: var(--cbb-font);
+  -webkit-font-smoothing: antialiased;
+  color: var(--cbb-ink);
+  overflow-x: hidden;
+}
+a { -webkit-tap-highlight-color: transparent; }
+
+/* ============ Animations ============ */
+@keyframes cbbmarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ============ FAQ accordion ============ */
+summary { list-style: none; cursor: pointer; outline: none; }
+summary::-webkit-details-marker { display: none; }
+details[open] [data-faqicon] { transform: rotate(45deg); }
+
+/* ============ Form inputs (RSVP flow) ============ */
+input, textarea, select { font-family: var(--cbb-font); }
+input::placeholder, textarea::placeholder { color: var(--cbb-grey); }
+.cbb-input:focus { border-color: var(--cbb-mint-deep); box-shadow: 0 0 0 4px var(--cbb-mint-tint); }
+
+/* ============ Marquee strip (Youth "looks you'll try") ============ */
+.cbb-marquee-track:hover { animation-play-state: paused; }
+
+/* ============ Hover states (style-hover in the prototype) ============ */
+.cbb-btn-rose:hover { background: #d35c79; }
+.cbb-btn-mint:hover { background: #a6f5e1; }
+.cbb-btn-outline:hover { background: var(--cbb-ink); color: #fff; }
+.cbb-navlink:hover { opacity: 1 !important; }
+.cbb-chip:hover { box-shadow: var(--cbb-shadow-md); }
+.cbb-stat-card:hover { box-shadow: var(--cbb-shadow-md); }
+.cbb-hover-md:hover { box-shadow: var(--cbb-shadow-md); }
+.cbb-event-card { transition: transform .18s cubic-bezier(.2,.7,.3,1), box-shadow .18s; }
+.cbb-event-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(0,0,0,.4); }
+.cbb-fade:hover { opacity: .7; }
+.cbb-social:hover { color: #fff !important; }
+.cbb-btn-ghost:hover { background: rgba(255,255,255,.1); }
+.cbb-btn-back:hover { border-color: var(--cbb-ink); }
+
+/* ============ Responsive ============ */
+[data-r="hamburger"] { display: none; }
+@media (max-width: 880px) {
+  [data-r="navlinks"], [data-r="navcta"] { display: none !important; }
+  [data-r="hamburger"] { display: inline-flex !important; }
+  [data-r="hero"] { grid-template-columns: 1fr !important; gap: 36px !important; padding-top: 48px !important; }
+  [data-r="herovisual"] { order: -1; }
+  [data-r="events"] { grid-template-columns: 1fr !important; }
+  [data-r="master"] { grid-template-columns: 1fr !important; }
+  [data-r="schedule"] { grid-template-columns: 1fr !important; }
+  [data-r="stats"] { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 560px) {
+  [data-r="sponsors"] { grid-template-columns: 1fr 1fr !important; }
+  [data-r="finalcta"] { flex-direction: column !important; align-items: stretch !important; }
+}
+
+/* ---- /master page (scoped, distinct hero attr to avoid clashing with /) ---- */
+@media (max-width: 980px) {
+  .cbb-master [data-r="mhero"] { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .cbb-master [data-r="mherovisual"] { order: -1; max-width: 480px; }
+  .cbb-master [data-r="tech"] { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .cbb-master [data-r="tech"][data-flip="1"] [data-r="techimg"] { order: -1; }
+}
+@media (max-width: 880px) {
+  .cbb-master [data-r="roster"] { grid-template-columns: 1fr 1fr !important; }
+  .cbb-master [data-r="circuit"] { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 560px) {
+  .cbb-master [data-r="roster"] { grid-template-columns: 1fr !important; }
+  .cbb-master [data-r="footrow"] { flex-direction: column !important; align-items: flex-start !important; }
+  .cbb-master [data-r="footrow"] [data-r="footmeta"] { text-align: left !important; }
+}
+
+/* ---- /youth page (scoped) ---- */
+@media (max-width: 880px) {
+  .cbb-youth [data-r="why"] { grid-template-columns: 1fr 1fr !important; }
+  .cbb-youth [data-r="venue"] { grid-template-columns: 1fr !important; }
+  .cbb-youth [data-r="rsvpgrid"] { grid-template-columns: 1fr !important; }
+  .cbb-youth [data-r="formrow"] { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 560px) {
+  .cbb-youth [data-r="why"] { grid-template-columns: 1fr !important; }
+  .cbb-youth [data-r="steptrack"] { gap: 4px !important; }
+  .cbb-youth [data-r="steptrack"] [data-r="steplabel"] { display: none !important; }
+}
+
+/* ---- /pro page (scoped) ---- */
+@media (max-width: 880px) {
+  .cbb-pro [data-r="benefits"] { grid-template-columns: 1fr 1fr !important; }
+  .cbb-pro [data-r="venue"] { grid-template-columns: 1fr !important; }
+  .cbb-pro [data-r="tickets"] { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 560px) {
+  .cbb-pro [data-r="benefits"] { grid-template-columns: 1fr !important; }
+  .cbb-pro [data-r="tl"] { grid-template-columns: 96px 1fr !important; gap: 16px !important; }
+}
