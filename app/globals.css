@@ -1,10 +1,4 @@
-/* ============ Fonts ============ */
-@font-face { font-family: "Pretendard"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-Regular.woff2") format("woff2"); }
-@font-face { font-family: "Pretendard"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-Medium.woff2") format("woff2"); }
-@font-face { font-family: "Pretendard"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-SemiBold.woff2") format("woff2"); }
-@font-face { font-family: "Pretendard"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-Bold.woff2") format("woff2"); }
-@font-face { font-family: "Pretendard"; font-weight: 800; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-ExtraBold.woff2") format("woff2"); }
-@font-face { font-family: "Pretendard"; font-weight: 900; font-style: normal; font-display: swap; src: url("/fonts/Pretendard-Black.woff2") format("woff2"); }
+/* Fonts are loaded via next/font/local in app/layout.tsx (--font-pretendard). */
 
 /* ============ Design tokens ============ */
 :root {
@@ -24,7 +18,7 @@
   --cbb-shadow-md: 0 4px 14px rgba(26,26,26,.08), 0 10px 30px rgba(26,26,26,.06);
   --cbb-shadow-rose: 0 8px 24px rgba(220,110,136,.28);
   --cbb-shadow-mint: 0 8px 24px rgba(120,230,200,.45);
-  --cbb-font: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", system-ui, sans-serif;
+  --cbb-font: var(--font-pretendard), -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", system-ui, sans-serif;
 }
 
 /* ============ Reset ============ */

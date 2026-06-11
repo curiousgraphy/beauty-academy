@@ -1,4 +1,5 @@
 import { site } from "@/lib/data";
+import { asset } from "@/lib/asset";
 
 export default function Footer() {
   return (
@@ -49,7 +50,7 @@ export default function Footer() {
               Supported by
             </span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/colavo-logo.png" alt={site.colavo.name} style={{ height: 19, width: "auto" }} />
+            <img src={asset("/assets/colavo-logo.png")} alt={site.colavo.name} style={{ height: 19, width: "auto" }} />
           </a>
         </div>
 

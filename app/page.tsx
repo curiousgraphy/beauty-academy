@@ -17,6 +17,7 @@ import CTA from "@/components/CTA";
 import EventCard from "@/components/EventCard";
 import VenueCard from "@/components/VenueCard";
 import ImageSlot from "@/components/ImageSlot";
+import { asset } from "@/lib/asset";
 
 /* Shared presentational helpers (landing-page-local) */
 
@@ -483,7 +484,7 @@ export default function Home() {
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={partners.supporter.logo}
+              src={asset(partners.supporter.logo)}
               alt={partners.supporter.logoAlt}
               style={{ height: 34, width: "auto", alignSelf: "flex-start" }}
             />
@@ -545,7 +546,7 @@ export default function Home() {
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={partners.partner.logo}
+              src={asset(partners.partner.logo)}
               alt={partners.partner.logoAlt}
               style={{ width: 72, height: 72, objectFit: "contain", margin: "14px 0 4px" }}
             />

@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { asset } from "@/lib/asset";
 
 /**
  * Mirrors the prototype's <image-slot>: a droppable image area that renders the
@@ -45,7 +46,7 @@ export default function ImageSlot({
       <div style={{ ...box, position: "relative" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={src}
+          src={asset(src)}
           alt={alt}
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: fit, display: "block" }}
         />
