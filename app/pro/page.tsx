@@ -196,6 +196,7 @@ export default function ProPage() {
             {[...p.strip.frames, ...p.strip.frames].map((f, i) => (
               <ImageSlot
                 key={`${f.id}-${i}`}
+                src={f.src}
                 placeholder={f.placeholder}
                 radius={18}
                 tone={f.tone}

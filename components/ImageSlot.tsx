@@ -38,13 +38,16 @@ export default function ImageSlot({
   };
 
   if (src) {
+    // Absolutely-positioned image so it fills the box without contributing
+    // height — keeps `aspect-ratio`-sized slots correct across browsers
+    // (Safari/Firefox don't resolve `height:100%` against an aspect-ratio height).
     return (
-      <div style={box}>
+      <div style={{ ...box, position: "relative" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={src}
           alt={alt}
-          style={{ width: "100%", height: "100%", objectFit: fit, display: "block" }}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: fit, display: "block" }}
         />
       </div>
     );

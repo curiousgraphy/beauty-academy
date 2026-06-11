@@ -85,7 +85,7 @@ export const hero = {
   portrait: {
     id: "cbb-hero-portrait",
     placeholder: "Drop hero portrait — glass-skin glow",
-    src: null as string | null,
+    src: "/images/hero-glass-skin-portrait.webp",
   },
   floatingCards: [
     { day: "13", track: "pro", title: "Pro Masterclass", meta: "Jul 13 · Midtown · $200" },
@@ -300,7 +300,7 @@ export const master = {
   portrait: {
     id: "cbb-master-portrait",
     placeholder: "Drop portrait — Eonju Lee",
-    src: null as string | null,
+    src: "/images/home-master-eonju-portrait.webp",
   },
 };
 
@@ -367,10 +367,10 @@ export const partners = {
   },
   sponsorsKicker: "Sponsors — in talks",
   sponsors: [
-    { id: "cbb-sponsor-autte", placeholder: "Autte logo", tone: "mint", src: null as string | null },
-    { id: "cbb-sponsor-lunabe", placeholder: "Luna&BE logo", tone: "pink", src: null as string | null },
-    { id: "cbb-sponsor-danahan", placeholder: "Danahan logo", tone: "mint", src: null as string | null },
-    { id: "cbb-sponsor-mubean", placeholder: "MUbean logo", tone: "pink", src: null as string | null },
+    { id: "cbb-sponsor-autte", placeholder: "Autte logo", tone: "mint", src: "/images/sponsor-autte.webp" },
+    { id: "cbb-sponsor-lunabe", placeholder: "Luna&BE logo", tone: "pink", src: "/images/sponsor-lunabe.webp" },
+    { id: "cbb-sponsor-danahan", placeholder: "Danahan logo", tone: "mint", src: "/images/sponsor-danahan.webp" },
+    { id: "cbb-sponsor-mubean", placeholder: "MUbean logo", tone: "pink", src: "/images/sponsor-mubean.webp" },
   ],
 };
 
@@ -495,7 +495,7 @@ export const masterPage = {
       { label: "See her at the Pro Masterclass →", href: "/pro", variant: "rose" },
       { label: "Meet the Collective", href: "#collective", variant: "outline" },
     ] as { label: string; href: string; variant: "rose" | "outline" }[],
-    portrait: { id: "m-hero", placeholder: "Portrait — Eonju Lee, editorial", src: null as string | null },
+    portrait: { id: "m-hero", placeholder: "Portrait — Eonju Lee, editorial", src: "/images/master-hero-eonju.webp" },
     tourCard: { kicker: "2026 Tour", pre: "São Paulo → ", accent: "New York" },
     rankCard: "1 of 3 CBB Masters",
   },
@@ -527,7 +527,7 @@ export const masterPage = {
         body: "글래스 스킨 메이크업 — the luminous, lit-from-within base Seoul is known for. Skin prep, layering and finish that reads flawless on camera and in person.",
         tags: ["Skin prep", "Dewy layering", "Camera-ready finish"],
         flip: false,
-        image: { id: "m-craft-1", placeholder: "Glass-skin makeup — close-up", src: null },
+        image: { id: "m-craft-1", placeholder: "Glass-skin makeup — close-up", src: "/images/master-craft-glass-skin.webp" },
       },
       {
         num: "02",
@@ -537,7 +537,7 @@ export const masterPage = {
         body: "내추럴 웨이브 / 텍스처 헤어 스타일링 — soft, movement-rich waves and lived-in texture that pair with the glass-skin base for a complete look.",
         tags: ["Natural wave", "Texture & movement", "Finishing"],
         flip: true,
-        image: { id: "m-craft-2", placeholder: "Natural-wave / texture hair", src: null },
+        image: { id: "m-craft-2", placeholder: "Natural-wave / texture hair", src: "/images/master-craft-natural-wave-hair.webp" },
       },
       {
         num: "03",
@@ -547,7 +547,7 @@ export const masterPage = {
         body: "The most-booked wedding looks from her Cheongdam chair — elegant, photograph-first artistry refined across Paris, London and São Paulo runways.",
         tags: ["Wedding", "Editorial", "Runway"],
         flip: false,
-        image: { id: "m-craft-3", placeholder: "Bridal / editorial look", src: null },
+        image: { id: "m-craft-3", placeholder: "Bridal / editorial look", src: "/images/master-craft-bridal-editorial.webp" },
       },
       {
         num: "04",
@@ -557,7 +557,7 @@ export const masterPage = {
         body: "Beyond technique: reading what's booking in Seoul and turning it into high-ticket menu items — the revenue-first insight that opens the masterclass.",
         tags: ["Trend reading", "Menu pricing", "Ticket lift"],
         flip: true,
-        image: { id: "m-craft-4", placeholder: "Trend briefing / studio session", src: null },
+        image: { id: "m-craft-4", placeholder: "Trend briefing / studio session", src: "/images/master-craft-trend-briefing.webp" },
       },
     ] satisfies CraftItem[],
   },
@@ -580,7 +580,7 @@ export const masterPage = {
         pill: { text: "✈ São Paulo → New York · 2026", tone: "pink" },
         topBadge: "NY Ambassador",
         highlighted: true,
-        image: { id: "m-c-eonju", placeholder: "Eonju Lee", tone: "pink", src: null },
+        image: { id: "m-c-eonju", placeholder: "Eonju Lee", tone: "pink", src: "/images/master-collective-eonju-lee.webp" },
       },
       {
         name: "Ahyun Kim · 김아현",
@@ -589,7 +589,7 @@ export const masterPage = {
         salon: "Hanol · Hongdae",
         pill: { text: "Seoul flagship", tone: "grey" },
         highlighted: false,
-        image: { id: "m-c-2", placeholder: "Ahyun Kim", tone: "mint", src: null },
+        image: { id: "m-c-2", placeholder: "Ahyun Kim", tone: "mint", src: "/images/master-collective-ahyun-kim.webp" },
       },
       {
         name: "Suhyun Cho · 조수현",
@@ -598,7 +598,7 @@ export const masterPage = {
         salon: "Ara PMU · Gangnam",
         pill: { text: "Seoul flagship", tone: "grey" },
         highlighted: false,
-        image: { id: "m-c-3", placeholder: "Suhyun Cho", tone: "pink", src: null },
+        image: { id: "m-c-3", placeholder: "Suhyun Cho", tone: "pink", src: "/images/master-collective-suhyun-cho.webp" },
       },
     ] satisfies AmbassadorCard[],
   },
@@ -670,6 +670,7 @@ export interface StripFrame {
   id: string;
   placeholder: string;
   tone: "mint" | "pink";
+  src: string;
 }
 
 export interface ProgramRow {
@@ -733,7 +734,7 @@ export const youthPage = {
     portrait: {
       id: "y-hero",
       placeholder: "Drop a student-seminar still — dewy everyday glow",
-      src: null as string | null,
+      src: "/images/youth-hero-seminar.webp",
     },
     floatA: { badge: "$0", title: "Free entry", meta: "RSVP required" },
     floatB: { value: "30 seats", label: "students only" },
@@ -743,15 +744,15 @@ export const youthPage = {
     eyebrow: "Looks you'll try",
     caption: "Everyday glow, your way — drag your own looks onto any frame · hover to pause",
     frames: [
-      { id: "yf-1", placeholder: "Dewy everyday glow", tone: "mint" },
-      { id: "yf-2", placeholder: "K-pop idol look", tone: "pink" },
-      { id: "yf-3", placeholder: "Fresh base + tint", tone: "mint" },
-      { id: "yf-4", placeholder: "Soft glam", tone: "pink" },
-      { id: "yf-5", placeholder: "Glow close-up", tone: "mint" },
-      { id: "yf-6", placeholder: "Healthy skin", tone: "pink" },
-      { id: "yf-7", placeholder: "Festival look", tone: "mint" },
-      { id: "yf-8", placeholder: "Everyday hair", tone: "pink" },
-      { id: "yf-9", placeholder: "Confidence shot", tone: "mint" },
+      { id: "yf-1", placeholder: "Dewy everyday glow", tone: "mint", src: "/images/youth-look-dewy-glow.webp" },
+      { id: "yf-2", placeholder: "K-pop idol look", tone: "pink", src: "/images/youth-look-kpop-idol.webp" },
+      { id: "yf-3", placeholder: "Fresh base + tint", tone: "mint", src: "/images/youth-look-fresh-base-tint.webp" },
+      { id: "yf-4", placeholder: "Soft glam", tone: "pink", src: "/images/youth-look-soft-glam.webp" },
+      { id: "yf-5", placeholder: "Glow close-up", tone: "mint", src: "/images/youth-look-glow-closeup.webp" },
+      { id: "yf-6", placeholder: "Healthy skin", tone: "pink", src: "/images/youth-look-healthy-skin.webp" },
+      { id: "yf-7", placeholder: "Festival look", tone: "mint", src: "/images/youth-look-festival.webp" },
+      { id: "yf-8", placeholder: "Everyday hair", tone: "pink", src: "/images/youth-look-everyday-hair.webp" },
+      { id: "yf-9", placeholder: "Confidence shot", tone: "mint", src: "/images/youth-look-confidence.webp" },
     ] satisfies StripFrame[],
   },
 
@@ -917,7 +918,7 @@ export const youthPage = {
     ],
     mapUrl: "https://www.google.com/maps/search/?api=1&query=1204+Broadway+New+York+NY+10001",
     mapLabel: "Open in Google Maps →",
-    image: { id: "y-venue", placeholder: "Drop venue photo — Luminary 4F, NoMad", src: null as string | null },
+    image: { id: "y-venue", placeholder: "Drop venue photo — Luminary 4F, NoMad", src: "/images/youth-venue-luminary.webp" },
   },
 
   faq: {
@@ -1026,7 +1027,7 @@ export const proPage = {
     portrait: {
       id: "pro-hero-demo",
       placeholder: "Drop a live-styling still — glass-skin demo",
-      src: null as string | null,
+      src: "/images/pro-hero-live-styling.webp",
     },
     floatA: { badge: "90", title: "Minutes, live", meta: "3 parts · one master" },
     floatB: { value: "30 seats", label: "licensed pros only" },
@@ -1036,15 +1037,15 @@ export const proPage = {
     eyebrow: "Glass Skin → Bridal Mastery",
     caption: "The look you'll learn — drag your own work onto any frame · hover to pause",
     frames: [
-      { id: "pf-1", placeholder: "Glass skin glow", tone: "pink" },
-      { id: "pf-2", placeholder: "Bridal updo", tone: "mint" },
-      { id: "pf-3", placeholder: "Natural wave", tone: "pink" },
-      { id: "pf-4", placeholder: "Soft bridal glam", tone: "mint" },
-      { id: "pf-5", placeholder: "Glass skin close-up", tone: "pink" },
-      { id: "pf-6", placeholder: "Bridal veil look", tone: "mint" },
-      { id: "pf-7", placeholder: "Editorial", tone: "pink" },
-      { id: "pf-8", placeholder: "K-beauty base", tone: "mint" },
-      { id: "pf-9", placeholder: "Wave styling", tone: "pink" },
+      { id: "pf-1", placeholder: "Glass skin glow", tone: "pink", src: "/images/pro-look-glass-skin-glow.webp" },
+      { id: "pf-2", placeholder: "Bridal updo", tone: "mint", src: "/images/pro-look-bridal-updo.webp" },
+      { id: "pf-3", placeholder: "Natural wave", tone: "pink", src: "/images/pro-look-natural-wave.webp" },
+      { id: "pf-4", placeholder: "Soft bridal glam", tone: "mint", src: "/images/pro-look-soft-bridal-glam.webp" },
+      { id: "pf-5", placeholder: "Glass skin close-up", tone: "pink", src: "/images/pro-look-glass-skin-closeup.webp" },
+      { id: "pf-6", placeholder: "Bridal veil look", tone: "mint", src: "/images/pro-look-bridal-veil.webp" },
+      { id: "pf-7", placeholder: "Editorial", tone: "pink", src: "/images/pro-look-editorial.webp" },
+      { id: "pf-8", placeholder: "K-beauty base", tone: "mint", src: "/images/pro-look-kbeauty-base.webp" },
+      { id: "pf-9", placeholder: "Wave styling", tone: "pink", src: "/images/pro-look-wave-styling.webp" },
     ] satisfies StripFrame[],
   },
 
@@ -1105,7 +1106,7 @@ export const proPage = {
         title: "Gift bag",
         body: "A sponsor gift bag for every attendee. ",
         note: "Contents — sponsors in talks.",
-        image: { id: "pro-giftbag", placeholder: "Gift bag photo", src: null },
+        image: { id: "pro-giftbag", placeholder: "Gift bag photo", src: "/images/pro-giftbag.webp" },
       },
     ] satisfies ProBenefit[],
   },
@@ -1146,7 +1147,7 @@ export const proPage = {
     mapUrl:
       "https://www.google.com/maps/search/?api=1&query=Perkins+Coie+1155+Avenue+of+the+Americas+New+York&query_place_id=ChIJNZvR1v5YwokRwhttLvaPQBM",
     mapLabel: "Open in Google Maps →",
-    image: { id: "pro-venue", placeholder: "Drop venue photo — Perkins Coie 22F", src: null as string | null },
+    image: { id: "pro-venue", placeholder: "Drop venue photo — Perkins Coie 22F", src: "/images/pro-venue-perkins-coie.webp" },
   },
 
   faq: {

@@ -213,6 +213,7 @@ export default function YouthPage() {
             {[...y.strip.frames, ...y.strip.frames].map((f, i) => (
               <ImageSlot
                 key={`${f.id}-${i}`}
+                src={f.src}
                 placeholder={f.placeholder}
                 radius={18}
                 tone={f.tone}
